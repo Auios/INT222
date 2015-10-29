@@ -1,36 +1,92 @@
 *
 {
     margin: 0px;
-    padding: 10px;
+    padding: 0px;
     color: #FFFFFF;
     background-color: inherit;
 }
 
 body
 {
-    background-color: #2D4571;
+    padding: 10px;
+    background-color: #2D4571; /*Main Base Color*/
+    font-size: 17px;
 }
 
 #wrapper
 {
     width: 75%;
     margin: 20px auto;
+    padding: inherit;
 }
 
 #header
 {
     background-color: #152C55;
-    min-height: 100px;
+    min-height: 10px;
+    padding: inherit;
 }
 
 #mainContent
 {
     background-color: #4D648D;
     min-height: 400px;
+    padding: inherit;
 }
 
 #footer
 {
     background-color: #152C55;
-    min-height: 100px;
+    min-height: 10px;
+    padding: inherit;
+}
+
+/* ==========NAVIGATION========== */
+nav
+{
+    background-color: inherit;
+    min-height: 50px;
+}
+
+nav ul
+{
+    font-family: Arial, Verdana;
+    font-size: 20px;
+}
+
+nav ul li
+{
+    display: block;
+    position: relative;
+    float: left;
+}
+
+nav ul li ul
+{
+    display: none;
+}
+
+nav ul li a
+{
+    display: block;
+    text-decoration: none;
+    padding: 5px 15px 5px 15px;
+    background-color: #061839;
+}
+
+nav ul li a:hover
+{
+    background: #7689A9;
+}
+
+nav ul li:hover ul
+{
+    display: block;
+    position: absolute;
+}
+
+nav ul li:hover ul li
+{
+    float: none;
+    font-size: 12px;
 }
