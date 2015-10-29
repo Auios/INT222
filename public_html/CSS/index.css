@@ -1,29 +1,36 @@
 *
 {
     margin: 0px;
-    padding: 0px;
+    padding: 10px;
+    color: #FFFFFF;
+    background-color: inherit;
+}
+
+body
+{
+    background-color: #2D4571;
 }
 
 #wrapper
 {
-    width: 900px;
-    margin: 0px auto;
+    width: 75%;
+    margin: 20px auto;
 }
 
-header
+#header
 {
-    background-color: blue;
-    min-height: 100px;
-}
-
-footer
-{
-    background-color: red;
-    min-height: 100px;
+    background-color: #152C55;
+    min-height: 100px
 }
 
 #mainContent
 {
-    background-color: green;
+    background-color: #4D648D;
     min-height: 400px;
+}
+
+#footer
+{
+    background-color: #152C55;
+    min-height: 100px;
 }
