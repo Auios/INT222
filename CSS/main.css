@@ -1,0 +1,42 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    color: #FFFFFF;
+    background-color: inherit;
+}
+
+body
+{
+    padding: 10px;
+    background-color: #2D4571; /*Main Base Color*/
+    font-size: 17px;
+}
+
+#wrapper
+{
+    width: 75%;
+    margin: 20px auto;
+    padding: inherit;
+}
+
+#header
+{
+    background-color: #152C55;
+    min-height: 10px;
+    padding: inherit;
+}
+
+#mainContent
+{
+    background-color: #4D648D;
+    min-height: 400px;
+    padding: inherit;
+}
+
+#footer
+{
+    background-color: #152C55;
+    min-height: 10px;
+    padding: inherit;
+}
