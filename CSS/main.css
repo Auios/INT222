@@ -5,6 +5,7 @@
     color: #FFFFFF;
     background-color: inherit;
     font-family: Arial, Verdana;
+    
 }
 
 body
@@ -12,6 +13,7 @@ body
     padding: 10px;
     background-color: #2D4571; /*Main Base Color*/
     font-size: 17px;
+    
 }
 
 #wrapper
