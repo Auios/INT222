@@ -1,0 +1,99 @@
+*
+{
+    padding : 0;
+    margin : 0;
+    border : 0;
+    font-family: Arial, Verdana;
+    color: #FFFFFF;
+}
+
+body
+{
+    background-attachment : fixed;
+    background-size : 100% auto;
+    background-color: #2D4571;
+}
+
+p
+{
+    font-size: 17px;
+}
+
+a
+{
+    font-size: 17px;
+}
+
+.blended_grid
+{
+    display : block;
+    width : 1000px;
+    margin : 50px auto 50px auto;
+}
+
+.pageHeader
+{
+    background-color: #333333;
+    float : left;
+    clear : none;
+    height : 200px;
+    width : 1000px;
+}
+
+.pageHeaderSub
+{
+    background-color : #061839;
+    float : left;
+    clear : none;
+    height : 50px;
+    width : 1000px;
+}
+
+.pageBarLeft
+{
+    float : left;
+    clear : none;
+    min-width : 80px;
+    min-height : 80px;
+    
+}
+
+.pageBarLeftTop
+{
+    background-color: #152C55;
+    float : none;
+    clear : both;
+    height : 250px;
+    width : 200px;
+}
+
+.pageContent
+{
+    background-color: #152C55;
+    float : left;
+    clear : none;
+    min-height : 600px;
+    width : 580px;
+    margin-bottom: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.pageBarRight
+{
+    float : left;
+    clear : none;
+    min-width : 80px;
+    min-height : 80px;
+    
+}
+
+.pageBarRightTop
+{
+    background-color: #152C55;
+    float : none;
+    clear : both;
+    height : 250px;
+    width : 200px;
+}
+
