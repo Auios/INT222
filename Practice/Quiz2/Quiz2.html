@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz 2</title>
+	<link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+	<div class="center">
+		<h2>Medical Information</h2>
+
+		<form action="http://formpost.azurewebsites.net/home/test" method="post">
+			<p>
+				<span style="color:red">*</span>
+				Name:
+				<input type="text" name="firstLastName" placeholder="Last Name, First Name" maxlength="30" required>
+			</p>
+			<p>
+				Gender:
+				<input type="radio" name="sex" value="female">Female
+				<input type="radio" name="sex" value="male">Male
+			</p>
+			<p>
+				Age:
+				<input type="number" min="0" max="200" style="width: 215px;">
+			</p>
+			<p>
+				Province:
+				<select>
+					<option value="ON" selected>Ontario</option>
+					<option value="QC">Quebec</option>
+					<option value="NS">Nova Scotia</option>
+					<option value="NB">New Brunswick</option>
+					<option value="MB">Manitoba</option>
+					<option value="BC">British Columbia</option>
+					<option value="PE">Prince Edward Island</option>
+					<option value="SK">Saskatchewan</option>
+					<option value="AB">Alberta</option>
+					<option value="NL">Newfoundland and Labrador</option>
+				</select>	
+			</p>
+			<p>
+				Symptom:
+				<input type="checkbox" name="sym" value="Fever">Fever
+				<input type="checkbox" name="sym" value="Cough">Cough
+				<input type="checkbox" name="sym" value="Rash">Rash
+			</p>
+			<p>
+				Other Symptoms:<br><br>
+				<textarea name="otherSym" rows="12" cols="50"></textarea>
+			</p>
+			<p>
+				Email:
+				<input type="email" name="email">
+			</p>
+			<p>
+				<input type="submit" value="Submit">
+				<input type="reset" value="Reset">
+			</p>
+		</form>
+	</div>
+</body>
+</html>

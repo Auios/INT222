@@ -1,0 +1,16 @@
+li
+{
+  display: inline;
+  list-style-type: none;
+}
+li a
+{
+  padding: 15px;
+  background-color: blue;
+  color: white;
+  text-decoration: none;
+}
+li a:hover
+{
+  background-color: red;
+}

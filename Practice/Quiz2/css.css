@@ -1,0 +1,18 @@
+.center {
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+    background-color: #FFCC33
+}
+
+h2
+{
+	color: red;
+    text-align: center;
+}
+
+p
+{
+	padding-left:10%;
+	color: blue;
+}

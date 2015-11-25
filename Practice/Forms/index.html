@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Forms</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+	<script src="valid.js"></script>
+</head>
+<body>
+	<h2>Form test</h2>
+
+	<form name="myForm" method="post" action="http://formpost.azurewebsites.net/home/test">
+		<fieldset>
+			<legend>Login Page</legend>
+			<p>
+				Username:<br>
+				<input name="usr" type="text" placeholder="Username" size="16" maxlength="16" required>
+			</p>
+			<p>
+				Password:<br>
+				<input name="pwd" type="password" placeholder="Password" size="16" maxlength="16" required>
+			</p>
+			<p>
+				<input type="submit" value="Submit">
+				<input type="reset" value="Clear">
+			</p>
+		</fieldset>
+		<br>
+		<fieldset>
+			<legend>Attach Files</legend>
+			<p>
+				Files:<br>
+				<input name="files" type="file" multiple>
+			</p>
+			<p>
+				<input type="submit" value="Submit">
+				<input type="reset" value="Clear">
+			</p>
+		</fieldset>
+		<br>
+		<fieldset>
+			<legend>Other Stuff</legend>
+			<p>
+				Number:<br>
+				<input name="numberValue" type="number" value="0" min="0" max="999">
+			</p>
+			<p>
+				Rate:<br>
+				<input name="rating" type="range" min="0" max="10">
+			</p>
+			<p>
+				Email:<br>
+				<input name="thisEmail" type="email" min="0" max="10">
+			</p>
+			<p>
+				Department:<br>
+				<input list="Depart" name="dep">
+				<datalist id="Depart">
+					<option value="One">Pick</option>
+					<option value="Two">Me</option>
+					<option value="Three">Up</option>
+				</datalist>
+			<p>
+				Message:<br>
+				<textarea name="message" rows="10" cols="16"></textarea>
+			</p>
+			<p>
+				<input type="submit" value="Submit">
+				<input type="reset" value="Clear">
+			</p>
+		</fieldset>
+	</form>
+</body>
+</html>
