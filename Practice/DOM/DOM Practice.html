@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM</title>
+	<style>
+		body
+		{
+			width: 60%;
+			margin: 50px auto;
+			border: 2px solid black;
+		}
+		div
+		{
+			width: 90%;
+			margin: 1px auto;
+		}
+
+		.red{color:red;}
+		.green{color:green;}
+		.blue{color:blue;}
+	</style>
+	<script>
+		function byID()
+		{
+			//Manually get <p> tags by ID
+			var obj_p;
+			var txt;
+			var res;
+
+			obj_p = document.getElementById("p1");
+			txt = obj_p.innerHTML;
+
+			obj_p = document.getElementById("p2");
+			txt += "<br>" + obj_p.innerHTML;
+
+
+			res = document.getElementById("result");
+			res.innerHTML = "Result: <br><br>" + txt;
+		}
+
+		function byTagName()
+		{
+			//Use loop to get all <p> tag contents except for last result <p> tag
+			//Get them using TagName
+			var a,i = 0;
+			var txt = "";
+			var res;
+
+			a = document.getElementsByTagName("p");
+			for(i=0;i<a.length-1;i++)
+			{
+				txt+=a[i].innerHTML + "<br>"
+			}
+
+			res = document.getElementById("result");
+			res.innerHTML = "Result: <br><br>" + txt;
+		}
+
+		function byClass()
+		{
+			//Get css attributes using classes
+			var a;
+			var sty;
+			var res;
+
+			a = document.getElementsByClassName("green");
+			sty = a[0].style.color;
+
+			res = document.getElementById("result");
+			res.innerHTML = "Result: <br><br> The color is:" + sty;
+		}
+	</script>
+</head>
+<body id="bdy">
+	<div id = "mainDiv">
+		<p id = "p1" class="red">Para 1</p>
+		<p id = "p2" class="green">Para 2</p>
+		<p id = "p3" class="blue">Para 3</p>
+
+		<button onclick = "byID();">ID</button>
+		<button onclick = "byTagName();">Tag</button>
+		<button onclick = "byClass();">Class</button>
+
+		<hr>
+
+		<p id="result">Result: <br><br></p>
+	</div>
+</body>
+</html>
