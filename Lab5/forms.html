@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Forms</title>
+	<script>
+		function submitButton()
+		{
+            document.write('<hr>');
+            document.write('<p>');
+            document.write('<input type="submit" value="Submit"> ');
+            document.write('<input type="reset" value="Clear">');
+            document.write('</p>');
+            return 0;
+		}
+	</script>
+	<style>
+		body
+		{
+			width: 60%;
+			margin: 25px auto;
+		}
+		textarea
+		{
+			resize: none;
+		}
+	</style>
+</head>
+<body>
+	<h2>Form test</h2>
+    
+    <script>
+        var dt=new Date(document.lastModified);
+        document.write("<mark> This page was last modified on " + dt.toLocaleString() + "</mark>");
+    </script>
+
+	<form name="loginForm" method="post" action="http://formpost.azurewebsites.net/home/test">
+		<fieldset>
+			<legend>Login Page</legend>
+			<p>
+				Username:<br>
+				<input name="usr" type="text" placeholder="Username" title="Username" size="16" maxlength="16" required>
+			</p>
+			<p>
+				Password:<br>
+				<input name="pwd" type="password" placeholder="Password" title="Password" size="16" maxlength="16" required>
+			</p>
+            
+            <script>submitButton();</script>
+		</fieldset>
+    </form>
+    
+    <br>
+    
+    <form name="filesForm" method="post" action="http://formpost.azurewebsites.net/home/test">
+		<fieldset>
+			<legend>Attach Files</legend>
+			<p>
+				Files:<br>
+				<input name="files" type="file" multiple>
+			</p>
+            
+            <script>submitButton();</script>
+		</fieldset>
+    </form>
+    
+    <br>
+    
+    <form name="emailForm" method="post" action="http://formpost.azurewebsites.net/home/test">
+        <fieldset>
+            <legend>Email</legend>
+            <p>
+                Email:<br>
+                <input type="email" name="email">
+            </p>
+            
+            <script>submitButton();</script>
+        </fieldset>
+    </form>
+    
+    <br>
+    
+    <form name="genderForm" method="post" action="http://formpost.azurewebsites.net/home/test">
+        <fieldset>
+            <legend>Gender</legend>
+            <p>
+                Gender:<br>
+                <input type="radio" name="sex" value="male" checked>Male
+                <input type="radio" name="sex" value="female">Female
+            </p>
+            
+            <script>submitButton();</script>
+        </fieldset>
+    </form>
+    
+    <form name="favColorForm" method="post" action="http://formpost.azurewebsites.net/home/test">
+        <fieldset>
+            <legend>Favorite Color</legend>
+            <p>
+                What is your favorite color?<br>
+                <i>(Green is not a creative color!)</i><br>
+                <input type="checkbox" name="favColor" value="red">Red
+                <input type="checkbox" name="favColor" value="green" disabled="disabled">Green
+                <input type="checkbox" name="favColor" value="blue">Blue
+            </p>
+            
+            
+            <script>submitButton();</script>
+        </fieldset>
+    </form>
+    
+    <br>
+    
+    <form name="favColorForm" method="post" action="http://formpost.azurewebsites.net/home/test">
+        <fieldset>
+            <legend>Select</legend>
+            <p>
+                Choose options:<br>
+                <select name="options">
+                    <optgroup label="Programming">
+                        <option value="C++">C++</option>
+                        <option selected="selected" value="C">C</option>
+                        <option value="Java">Java</option>
+                    </optgroup>
+                    <optgroup label="Food">
+                        <option value="Pizza">Pizza</option>
+                        <option value="Ginger">Ginger</option>
+                        <option value="Coffee">Coffee</option>
+                    </optgroup>
+                </select>
+            </p>
+            
+            <script>submitButton();</script>
+        </fieldset>
+    
+    <br>
+    
+    <form name="otherStuffForm" method="post" action="http://formpost.azurewebsites.net/home/test">
+		<fieldset>
+			<legend>Other Stuff</legend>
+			<p>
+				Number:<br>
+				<input name="numberValue" type="number" value="0" min="0" max="999">
+			</p>s
+			<p>
+				Rate:<br>
+				<input name="rating" type="range" min="0" max="10">
+			</p>
+			<p>
+				Department:<br>
+				<input list="Depart" name="dep">
+				<datalist id="Depart">
+					<option value="One">Pick</option>
+					<option value="Two">Me</option>
+					<option value="Three">Up</option>
+				</datalist>
+			<p>
+				Message:<br>
+				<textarea name="message" rows="10" cols="16"></textarea>
+			</p>
+            
+            <script>submitButton();</script>
+		</fieldset>
+	</form>
+</body>
+</html>

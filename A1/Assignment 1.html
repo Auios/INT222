@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+    <head>
+    <title>Assignment 1</title>
+    </head>
+    <body>
+        <script>
+            /*********************************************************************************
+            * INT222 - Assignment #1 *
+            * I declare that this assignment is my own work in accordance with Seneca *
+            * Academic Policy. No part of this assignment has been copied manually or *
+            * electronically from any other source (including web sites) or distributed to *
+            * other students. *
+            * *
+            * Name: Connor Andrew "Auios" Ngo Student ID: 040842148 Date: October 18th, 2015*
+            *
+            *********************************************************************************/
+
+            var debug = 0;
+            function debugCheck(msg){if(debug){alert("Debug: " + msg);}}
+
+            debugCheck("START SCRIPT");
+
+            var bookTEMP = [];
+            var book = [];
+            var currentTime = new Date();
+            var currentYear = currentTime.getFullYear();
+            var input,data = [];
+            var valid = true,redo = true;
+            var i;
+            var finalReport = "";
+            var find;
+
+            function checkLength(entry,len)
+            {
+                if(entry.length != len)
+                {
+                    alert("Error: Wrong format. Reinput:\nbook name, author, year, price");
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+
+            function isValidEntry(entry)
+            {
+                if(bookTEMP.year <= 0 || bookTEMP.year > currentYear || !parseInt(bookTEMP.year,10) || bookTEMP.price < 0.00)
+                {
+                    alert("Error: Year or Price.\n Input year as a whole number,\n price as a non-negative float number, or\n END to stop");
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+
+            function parseData(data)
+            {
+                var tmpObj = [],i = 0;
+                tmpObj.nme    = data[i++];
+                tmpObj.author = data[i++];
+                tmpObj.year   = data[i++];
+                tmpObj.price  = data[i++];
+
+                return tmpObj;
+            }
+
+            function generateReport(book)
+            {
+                var rp = "";
+                for(i=0;i<book.length;i++)
+                {
+                    rp += book[i].nme + ", " + book[i].author + ", " + book[i].year + ", " + book[i].price + "\n";
+                }
+                return rp;
+            }
+
+            function searchReport(book)
+            {
+                var rp = "";
+                for(i=0;i<book.length;i++)
+                {
+                    if(find.test(book[i].nme))
+                    {
+                        rp += book[i].nme + ", " + book[i].author + ", " + book[i].year + ", " + book[i].price + "\n";
+                    }
+                }
+                return rp
+            }
+
+            do
+            {
+                bookTEMP = {nme:"NAME",author:"AUTHOR",year:"YEAR",price:-1.00};
+                valid = true;
+                input = prompt("Enter book name, author(s), year, and price");
+                if(input.toUpperCase() != "END")
+                {
+                    data = input.split(",");
+
+                    valid = checkLength(data,4);
+
+                    if(valid)
+                    {
+                        bookTEMP = parseData(data);
+
+                        if(!isValidEntry(bookTEMP))
+                        {
+                            valid = false;
+                        }
+                        else
+                        {
+                            book.push(bookTEMP);
+                        }
+                    }
+                }
+                else
+                {
+                    //List
+                    do
+                    {
+                        input = prompt("Search by book name.\nInput 'END' to stop.");
+                        if(!input)
+                        {
+                            finalReport = generateReport(book);
+                            alert(finalReport);
+                        }
+                        else
+                        {
+                            if(input.toUpperCase() != "END")
+                            {
+                                //Search
+                                find = new RegExp(input,'i')
+                                finalReport = searchReport(book);
+                                alert(finalReport);
+                            }
+                        }
+                    }while(input.toUpperCase() != "END");
+                    redo = false;
+                }
+            }while(!valid || redo);
+            debugCheck("END SCRIPT");
+        </script>
+    </body>
+</html>

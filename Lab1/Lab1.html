@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab1</title>
+</head>
+<body>
+
+	<script>
+		
+		/*
+		I declare that the attached assignment is wholly my own work in accordance
+		with Seneca Academic Policy. No part of this assignment has been copied
+		manually or electronically from any other source (including web sites) or
+		distributed to other students.
+		
+		Name: Connor Andrew Ngo
+		Student ID: 040842148
+		*/
+		
+		//Connor Andrew Ngo
+		//Lab 1
+		//Version 3
+		//9.23.2015
+		
+		var repeat = "Y";
+		var baseTax = 0.00;
+		var income = 0.00;
+
+		//Get base tax
+		baseTax = prompt("Enter Base Tax","");
+		baseTax = isValidBaseTax(baseTax);
+		
+		//Main loop
+		do
+		{	
+			income = 0.00;
+
+			income = prompt("Enter Income","");
+			income = isValidIncome(income);
+			
+			//Calculations
+			calculateOutput(baseTax,income);
+			
+			//Get valid repeat input [Y/N]
+			do
+			{
+				repeat = prompt("Enter next income? [Y/N]");
+				repeat = repeat.toUpperCase();
+			}while((repeat !== "Y" && repeat !== "N") || (repeat == "" || repeat == null));
+			
+		}while(repeat === "Y");
+
+
+		//Functions
+		function calculateOutput(bt,inco)
+		{
+			var ttax = 0.00;
+			var extax = 0.00;
+
+			//Adjust tax according to income
+			if(inco <= 40000)
+			{
+				extax = inco * 0.15;
+				ttax = extax + bt;
+			}
+			else if(inco > 40000 && inco <= 80000)
+			{
+				extax = (inco * 0.30) - (40000 * 0.15);
+				ttax = extax+bt;
+			}
+			else if(inco > 80000)
+			{
+				extax = ((inco-80000) * 0.50) + (80000 * 0.30) - (40000 * 0.15);
+				ttax = extax + bt;
+			}
+			else
+			{
+				//If there's an error it will return 1
+				return 1;
+			}
+
+			//Final output
+			alert("Income is $" + inco + ",\nThe base tax is $" + bt + ",\nextra tax is $" + extax + ",\ntotal tax is $" + ttax);
+
+			return 0;
+		}
+
+		function isValidBaseTax(bt)
+		{
+			while(isNaN(bt) || bt == "" || bt == null || bt < 0 || bt > 1000)
+			{
+				bt = prompt("ERROR! Enter Base Tax in the range [ 0.00 , 1000.00 ]:","");
+			}
+			return parseFloat(bt);
+		}
+
+		function isValidIncome(inco)
+		{
+			while(isNaN(inco) || inco == "" || inco == null || inco < 0 || inco > 10000000)
+			{
+				inco = prompt("ERROR! Enter Income in the range [ 0.00 , 10000000.00]:","");
+			}
+			return parseFloat(inco);
+		}
+		
+	</script>
+</body>
+</html>

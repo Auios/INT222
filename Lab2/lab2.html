@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<body>
+<script>
+	
+	/*
+	I declare that the attached assignment is wholly my own work in accordance
+	with Seneca Academic Policy. No part of this assignment has been copied
+	manually or electronically from any other source (including web sites) or
+	distributed to other students.
+	Name Connor Andrew Ngo Student ID 040842148
+	*/
+	
+	var username;
+	var password;
+	
+	var allowedUsername1 = /[\!\@\#\$\%\^\&\*\(\)\+\=\~]/g;
+	var allowedPassword1 = /[a-z]/g;
+	var allowedPassword2 = /[A-Z]/g;
+	var allowedPassword3 = /[0-9]/g;
+	
+	//Get username
+	username = getUsername();
+	
+	//Confirm
+	alert("Username is Valid.\nPlease enter password.");
+	
+	//Get password
+	password = getPassword();
+	
+	//Done
+	alert("Congratulations! You have entered valid username and password!");
+	
+	function getPassword()
+	{
+		var redo;
+		
+		password = prompt("Enter password");
+		
+		do
+		{
+			redo = 0;
+			if(password.length >= 6 && password.length <= 10)
+			{
+				if(password.search(allowedPassword1) >= 0 && password.search(allowedPassword2) >= 0 && password.search(allowedPassword3) >= 0)
+				{
+					redo = 0;
+				}
+				else
+				{
+					redo = 1;
+					password = prompt("Password must include all of the following categories: alphabet lower case, upper case, digit numbers\nPlease reinput.");
+				}
+			}
+			else
+			{
+				redo = 1;
+				password = prompt("Password must consist of no less than 6 characters AND no more than 10 characters");
+			}
+		}while(redo == 1);
+		
+		return password;
+	}
+	
+	function getUsername()
+	{
+		var flag = 0;
+		var redo;
+		
+		username = prompt("Enter username");
+		
+		do
+		{
+			flag = 0;
+			if(username.length > 0 && username.length <= 15)
+			{
+				if(username.search(allowedUsername1) < 0)
+				{
+					redo = 0;
+				}
+				else
+				{
+					redo = 1;
+					username = prompt("Username can only include alphabet letters(lowercase or upper case), digit numbers, hyphen(-), underscore(_), and period punctuation(.)");
+				}
+			}
+			else
+			{
+				redo = 1;
+				username = prompt("Username cannot be empty AND cannot exeed 15 characters.\nPlease reinput.");
+			}
+		}while(redo == 1);
+		
+		return username;
+	}
+	
+	
+</script>
+</body>
+</html>

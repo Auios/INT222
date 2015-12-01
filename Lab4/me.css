@@ -1,0 +1,58 @@
+*
+{
+    margin: 0px auto;
+    padding: 5px;
+    background-color: inherit;
+    font-family: Arial, Verdana;
+}
+
+hr /*Line was acting funny. I think I fixed it*/
+{
+    margin-top: 10px;
+    padding: 1px;
+    background-color: gray;
+}
+
+ul
+{
+    display: table;
+    margin: inherit;
+    list-style: none;
+}
+
+ul li
+{
+    padding: 10px;
+    font-weight: bold;
+}
+
+ul li ul li
+{
+    font-weight: normal;
+}
+
+p
+{
+    font-size: 20px;
+}
+
+/*Link state*/
+a:hover
+{
+    background: #FFFFFF;
+}
+
+a:visited 
+{
+    color:orange;
+}
+
+table
+{
+    margin: inherit;
+}
+
+thead
+{
+    font-weight: bold;
+}
