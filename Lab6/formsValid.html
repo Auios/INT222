@@ -8,14 +8,34 @@
 		{
             document.write('<hr>');
             document.write('<p>');
-            document.write('<input type="submit" value="Submit"> ');
-            document.write('<input type="reset" value="Clear">');
-            document.write('</p>');
             
             swich(sel)
             {
-                case ""
+                case "userPass":
+                    document.write('<input type="submit" value="Submit"> ');
+                    document.write('<input type="reset" value="Clear">');
+                    break;
+                
+                case "gender":
+                    document.write('<input type="submit" value="Submit"> ');
+                    document.write('<input type="reset" value="Clear">');
+                    break;
+                
+                case "favCol":
+                    document.write('<input type="submit" value="Submit"> ');
+                    document.write('<input type="reset" value="Clear">');
+                    break;
+                
+                case "sel":
+                    document.write('<input type="submit" value="Submit"> ');
+                    document.write('<input type="reset" value="Clear">');
+                    break;
+                
+                default:
+                    document.write('Error!');
+                    break;
             }
+            document.write('</p>');
             
             return 0;
 		}
@@ -58,7 +78,7 @@
                 <i>Password cannot contain letters or numbers</i>
 			</p>
             
-            <script>submitButton();</script>
+            <script>submitButton("userPass");</script>
 		</fieldset>
     </form>
     
@@ -74,7 +94,7 @@
                 <input type="radio" name="sex" value="both">Both
             </p>
             
-            <script>submitButton();</script>
+            <script>submitButton("gender");</script>
         </fieldset>
     </form>
     
@@ -91,7 +111,7 @@
             </p>
             
             
-            <script>submitButton();</script>
+            <script>submitButton("favCol");</script>
         </fieldset>
     </form>
     
@@ -118,7 +138,7 @@
                 <i>You must only select C/C++!</i>
             </p>
             
-            <script>submitButton();</script>
+            <script>submitButton("sel");</script>
         </fieldset>
     </form>
 </body>
