@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+         <title> Example Form </title>
+
+</head>
+
+<body>
+
+<div>
+   <!-- HTML Review -->
+
+  <form method="post" name="example_selection" id="frm1"
+       action='https://cs.senecac.on.ca/~int222/cgi-bin/echo-c.cgi' >
+
+
+  <h3> Please fill out the following form: </h3>
+
+
+  <p> the interested topics: </p>
+      <select name="topics">
+          <option value="web design"> web design </option>
+          <option value="programming" label="programming">programming</option>
+          <option>database</option>
+      </select>
+
+
+  <p> the details of the topics: </p>
+      <select multiple="multiple" name="topics_detail" size="4">
+        <optgroup label="web design">
+           <option selected="selected" value="HTML5"> HTML5 </option>
+           <option value="forms"> Forms </option>
+        </optgroup>
+
+        <optgroup label="programming">
+            <option selected value="C"> C language </option>
+			<option value = "C++"> C++ </option>
+            <option value = "Java"> Java </option>
+
+        </optgroup>
+     </select>
+  <p> Question: <input type="text"   name="Quest"    size="30"    maxlength="100"/>  </p>
+
+  <p>   <input type="submit" value="Submit"/>  &nbsp; &nbsp;
+        <input type ="reset" value = " Clear "/> </p>
+  </form>
+
+</div>
+
+</html>

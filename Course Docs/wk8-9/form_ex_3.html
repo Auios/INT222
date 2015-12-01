@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <title> Example Form </title>
+     <style>
+         h1{color: red;
+            test-align: center;}
+        .container{background: gray;
+                   width: 80%;
+                   margin: auto;
+                   font-size: 12pt; }
+     </style>
+</head>
+
+<body>
+  <div class = "container">
+  <h1> Testing on form </h1>
+  <form method="post" id = "example3" autocomplete="on"
+        action = "http://formpost.azurewebsites.net/home/test">
+
+          First name:<input type="text" name="fname" required = "required" pattern = "[A-Za-z ']+"
+          title="required, alphabet, space, and apostrophe"/><br/>
+		  Last name: <input type="text" name="lname" autofocus/><br/>
+		  Age: <input type = "number" name = "age" min="0" max = "999"/>  <br/>
+		  Salary Range ($0 - $10000): <input type = "range" name = "salary" min = "0" max = "10000"/> <br/>
+		  Department: <input list = "department" name = "dept"/>
+                  <datalist id = "department">
+                        <option value = "IT"> IT </option>
+                        <option value = "Finance"> Finance </option>
+                        <option value = "Sales"> Sales </option>
+                  </datalist>
+                  <br/>
+		  E-mail: <input type="email" name="email" autocomplete="off"><br/>
+
+		  Country code: <input type="text" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code"/>
+
+		  <br/>
+		  <input type="submit" value = "Submit"/>  &nbsp; &nbsp; &nbsp;
+		  <input type= "reset" value = "Reset"/>
+
+  </form>
+  </div>
+</html>

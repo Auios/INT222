@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>In class exercise</title>
+<link rel="stylesheet" href="proskills.css"/> <!-- will make one later-->
+</head>
+<body>
+   <h2> Your Info </h2>
+<form name = "frm1" method ="post" 
+      action = "http://formpost.azurewebsites.net/home/test">
+
+     Name: <input type= "text" name = "fName" 
+                  value ="Sunny"/>
+     password: <input type ="password" name ="pswd" 
+                       title = "Input your Password"/> 
+     <br/> <br/> 
+     Resume: <input type ="file" name = "res" value="Choose txt " multiple/> 
+     <br/>
+     Gender <input type ="radio" name = "gender" value = "M" id ="male"
+                   checked/>
+            <label for ="male">  Male </label>
+             <input type ="radio" name = "gender" value="F" id = "female"/> 
+           <label for = "female"> Female </label>
+     <br/>
+     Speciality: <input type = "checkbox" name = "spec" value="Prog" id = "prg"/>
+  			<label for="prg"> Programming </label>
+                <input type = "checkbox" name = "spec" value="db"/> DataBase
+                <input type = "checkbox" name = "spec" value="Web" checked/>  Web Development 
+   <br/>
+   Weekend plan:
+   <select name ="plan" size = "1" title = "Select One">
+    <!--   <option value = "0"> Select One </option>  -->
+      <option value = "1"> Study </option>
+      <option value = "2"> sleep </option>
+      <option value = "3"> do nothing </option>
+   </select>
+  <br/> <br/>  
+     <input type ="submit"/>
+
+     <input type = "reset" />
+</form>
+
+</body>
+
+</html>
