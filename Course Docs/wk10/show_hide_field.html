@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Show/ Hide a Field </title>
+    <meta http-equiv="content-type"
+             content="text/html;charset=utf-8" />
+    <script>
+     
+	
+	function showHiddenField()
+	{
+	  /*  document.getElementById("hideText").disabled = false;*/
+	    document.getElementById("hideText").style.display = "block";
+	}
+	
+	function hideField()
+	{
+	    var hideObj = document.getElementById("hideText");
+		/* hideObj.disabled = true; */
+		hideObj.style.display = "none";	
+	}
+   </script>
+
+</head>
+
+
+<body>
+
+   <form method='post' name='form1' id = 'form1'
+          action = "http://formpost.azurewebsites.net/home/test">
+
+		<p id = "hideText"> Field to hide: <input type = "text" name = "hideText"/> </p>
+		
+        <button type = "button" onclick = "hideField()"> Hide Field </button>
+		<button type = "button" onclick = "showHiddenField()"> Show Hidden Field </button>
+		
+	  </form>
+
+
+</body>
+</html>

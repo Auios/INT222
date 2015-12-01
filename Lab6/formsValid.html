@@ -2,45 +2,39 @@
 <html>
 <head>
 	<title>Forms</title>
-    
 	<script>
-		function submitButton(sel)
+		function submitButton()
 		{
             document.write('<hr>');
             document.write('<p>');
-            
-            swich(sel)
-            {
-                case "userPass":
-                    document.write('<input type="submit" value="Submit"> ');
-                    document.write('<input type="reset" value="Clear">');
-                    break;
-                
-                case "gender":
-                    document.write('<input type="submit" value="Submit"> ');
-                    document.write('<input type="reset" value="Clear">');
-                    break;
-                
-                case "favCol":
-                    document.write('<input type="submit" value="Submit"> ');
-                    document.write('<input type="reset" value="Clear">');
-                    break;
-                
-                case "sel":
-                    document.write('<input type="submit" value="Submit"> ');
-                    document.write('<input type="reset" value="Clear">');
-                    break;
-                
-                default:
-                    document.write('Error!');
-                    break;
-            }
+            document.write('<input type="submit" value="Submit"> ');
+            document.write('<input type="reset" value="Clear">');
             document.write('</p>');
-            
             return 0;
 		}
+        
+        /*==================================*/
+        
+        function validUserPass(thisUP)
+        {
+            
+        }
+        
+        function validGender(thisGender)
+        {
+            
+        }
+        
+        function validClr(thisClr)
+        {
+            
+        }
+        
+        function validLangFood(thisLF)
+        {
+            
+        }
 	</script>
-    
 	<style>
 		body
 		{
@@ -53,7 +47,6 @@
 		}
 	</style>
 </head>
-
 <body>
 	<h2>Form test</h2>
     
@@ -62,7 +55,7 @@
         document.write("<mark> This page was last modified on " + dt.toLocaleString() + "</mark>");
     </script>
 
-	<form name="loginForm" method="post" action="http://formpost.azurewebsites.net/home/test">
+	<form name="loginForm" method="post" action="http://formpost.azurewebsites.net/home/test" onsubmit='return validUserPass(this)'>
 		<fieldset>
 			<legend>Login Page</legend>
 			<p>
@@ -78,13 +71,13 @@
                 <i>Password cannot contain letters or numbers</i>
 			</p>
             
-            <script>submitButton("userPass");</script>
+            <script>submitButton();</script>
 		</fieldset>
     </form>
     
     <br>
     
-    <form name="genderForm" method="post" action="http://formpost.azurewebsites.net/home/test">
+    <form name="genderForm" method="post" action="http://formpost.azurewebsites.net/home/test" onsubmit='return validGender(this)'>
         <fieldset>
             <legend>Gender</legend>
             <p>
@@ -94,11 +87,11 @@
                 <input type="radio" name="sex" value="both">Both
             </p>
             
-            <script>submitButton("gender");</script>
+            <script>submitButton();</script>
         </fieldset>
     </form>
     
-    <form name="favColorForm" method="post" action="http://formpost.azurewebsites.net/home/test">
+    <form name="favColorForm" method="post" action="http://formpost.azurewebsites.net/home/test" onsubmit='return validClr(this)'>
         <fieldset>
             <legend>Favorite Color</legend>
             <p>
@@ -111,13 +104,13 @@
             </p>
             
             
-            <script>submitButton("favCol");</script>
+            <script>submitButton();</script>
         </fieldset>
     </form>
     
     <br>
     
-    <form name="favColorForm" method="post" action="http://formpost.azurewebsites.net/home/test">
+    <form name="langFood" method="post" action="http://formpost.azurewebsites.net/home/test" onsubmit='return validLangFood(this)'>
         <fieldset>
             <legend>Select</legend>
             <p>
@@ -138,7 +131,7 @@
                 <i>You must only select C/C++!</i>
             </p>
             
-            <script>submitButton("sel");</script>
+            <script>submitButton();</script>
         </fieldset>
     </form>
 </body>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <title> Validation - Datalist </title>
+     <style>
+         h1{color: red;
+            test-align: center;}
+        .container{background: gray;
+                   width: 80%;
+                   margin: auto;
+                   font-size: 12pt; }
+     </style>
+	 <script>
+	     /* must select one */
+	     function valDataList()
+		 {
+		    var flag =0;
+		    var dl = document.ex.dept.value.trim();
+			var valList = ["ICT", "Chem", "Comm"];
+			for (var i = 0; i < valList.length; i++)
+			{ if (dl == valList[i])
+			   flag = 1;
+			}
+			if (flag == 0)
+			{
+                alert("need to select one department");
+                return false;				
+			}
+			return true;
+		 }
+	 </script>
+</head>
+
+<body>
+
+  <div class = "container">
+  <h1> Testing on form </h1>
+  <form method="post" name = "ex"
+        action = "http://formpost.azurewebsites.net/home/test"
+		onsubmit = "return valDataList();">
+  
+        Name: <input type = "text" name = "name" /> <br/>
+	    department: <input list = "department" name = "dept" required = "required">
+		<datalist id = "department">
+		    <option value = "ICT"> I.C.T </option>
+			<option value = "Chem"> Chemistry </option>
+			<option value = "Comm"> Communication </option>
+		</datalist>
+		
+		<br/>
+		<input type = "submit" value = "submit"/> &nbsp; &nbsp;
+		<input type = "reset"  value = "reset"/>
+
+  </form>
+<br/>
+  </div>
+</html>

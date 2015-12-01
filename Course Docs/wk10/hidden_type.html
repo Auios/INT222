@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Hidden Type </title>
+    <meta http-equiv="content-type"
+             content="text/html;charset=utf-8" />
+    <script>
+      function showHidden()
+      {
+      // **************************************************************************
+      // **** Validate that the textarea named "comments" in the form named    ****
+      // **** "form1" has some text and change hidden value.                   ****
+      // **************************************************************************
+      alert("Value for hidden field: "+ document.form1.hid.value);
+    }
+	
+	function changeHidden()
+	{
+	   var hidValue = document.form1.hid.value;
+	   if (hidValue.toLowerCase() == "value1")
+	   {	   document.form1.hid.value = "value2";             /* Change hidden value  */
+	   }
+	   else if (hidValue.toLowerCase() == "value2")
+	   {	   document.form1.hid.value = "value1";             /* Change hidden value  */
+	   }
+	   
+       alert("Value for hidden field is changed to: "+ document.form1.hid.value);
+	}
+	</script>
+</head>
+<body>
+
+   <form method='post' name='form1' id = 'form1'
+          action = "http://formpost.azurewebsites.net/home/test">
+
+		<h3> Here is a hidden field below </h3> 
+        <input type='hidden' name='hid' id = "hid" value='value1' />
+	
+        <button type = "button" onclick = "showHidden();"> Show Hidden Value </button>
+		<button type = "button" onclick = "changeHidden();"> Change Hidden Value </button>
+		
+	  </form>
+
+
+</body>
+</html>
