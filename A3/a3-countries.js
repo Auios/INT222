@@ -8,7 +8,7 @@ var domains = [
   {"name": "ORG", "description": "Non-Profit Organization"},
   {"name": "ARPA", "description": "Arpanet"},
   {"name": "NATO", "description": "Nato field"}
-];  
+];
   
 var countries = [
   {"code": "AD", "name": "Andorra", "calling_code": "+376 "},
@@ -240,5 +240,3 @@ var countries = [
   {"code": "ZM", "name": "Zambia", "calling_code": "+263 "},
   {"code": "ZW", "name": "Zimbabwe", "calling_code": "+263 "}
 ];
-  
-  

@@ -3,6 +3,70 @@
     <head>
         <title>Sign Up</title>
         <link rel="stylesheet" type="text/css" href="a3.css">
+
+        <script src="a3-countries.js"></script>
+
+        <script>
+        	function addCountries()
+        	{
+        		var txt;
+        		var i = 0;
+
+        		for(i=0;i<countries.length;i++)
+        		{
+        			if(countries[i].name == "Canada")
+        			{
+        				txt+='<option name="country" id="country" value="' + countries[i].code + '" selected>' + countries[i].name + '</option>';
+        			}
+        			else
+        			{
+        				txt+='<option name"country" id="country" value="' + countries[i].code + '">' + countries[i].name + '</option>';
+        			}
+        		}
+        		document.write(txt);
+        	}
+        </script>
+		<script>
+			/*//
+			var x = 0;
+			var y = 0;
+
+			winRef = window.open('','winName','width=200,height=200,scrollbars=no');
+
+			do
+			{
+				do
+				{
+					x++;
+					y++;
+					winRef.moveTo(x,y);
+				}while(x<1000);
+
+				do
+				{
+					x++;
+					y--;
+					winRef.moveTo(x,y);
+				}while(x<2000);
+
+				do
+				{
+					x--;
+					y--;
+					winRef.moveTo(x,y);
+				}while(x>=1000);
+
+				do
+				{
+					x--;
+					y++;
+					winRef.moveTo(x,y);
+				}while(x>=2);
+			}while(true);
+
+			winRef.close();
+			//*/
+		</script>
     </head>
     <body>
         <div id="all">
@@ -47,12 +111,9 @@
                             <br>
                             <br id="adj">
 
-                            <select class="selectBox">
-                                <option value="volvo">Volvo</option>
-                                <option value="saab">Saab</option>
-                                <option value="mercedes">Mercedes</option>
-                                <option value="audi">Audi</option>
-                            </select>
+                        	<select>
+                        		<script>addCountries();</script>
+                        	</select>
                             
                             <p><input type="text" name="firstName" id="firstName" placeholder="First or Given Name" required class="inputTextBox"><span style="color:red;">&nbsp;&nbsp;*</span> <input type="text" name="lastName" id="lastName" placeholder="Last Name or Surname" required class="inputTextBox"></p>
                             <p><input type="text" name="jobTitle" id="jobTitle" required class="inputTextBox"></p>
@@ -61,11 +122,23 @@
 
                             <br>
 
+                            <p><input type="text" name="address" id="address" required class="inputTextBox"></p>
+                            <p><input type="text" name="address2" id="address2" class="inputTextBox"></p>
+                            <p><input type="text" name="city" id="city" required class="inputTextBox"></p>
+                            <p>
+                            	<select>
+                            		<script>addCountries();</script>
+                            	</select>
+                            </p>
                             <p><input type="" name="" id="" required class="inputTextBox"></p>
-                            <p><input type="" name="" id="" required class="inputTextBox"></p>
-                            <p><input type="" name="" id="" required class="inputTextBox"></p>
-                            <p><input type="" name="" id="" required class="inputTextBox"></p>
-                            <p><input type="" name="" id="" required class="inputTextBox"></p>
+
+                            <fieldset>
+                            	<legend>How did you hear about us?</legend>
+                            	<p><input type="radio" id="radio"> Google Search</p>
+                            	<p><input type="radio" id="radio"> Blog Post</p>
+                            	<p><input type="radio" id="radio"> Friend</p>
+                            	<p><input type="radio" id="radio"> Other</p>
+                            </fieldset>
 
 
 
@@ -74,6 +147,12 @@
                             <p><input type="submit" name="submit" id="submit" value="Create Account" class="buttons"> <input type="reset" name="reset" id="reset" class="buttons"></p>
                         </form>
                     </div>
+                    <div id="footer">
+                        <script>
+					        var dt=new Date(document.lastModified);
+					        document.write("<p>This page was last modified on " + dt.toLocaleString() + "</p>");
+					    </script>
+				    </div>
                 </div>
 
                 <div id="footer">
