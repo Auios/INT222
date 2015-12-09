@@ -9,6 +9,21 @@ var domains = [
   {"name": "ARPA", "description": "Arpanet"},
   {"name": "NATO", "description": "Nato field"}
 ];
+
+//*/
+var prov = [
+    {"name": "Ontario", "code": "ON"},
+    {"name": "Quebec", "code": "QC"},
+    {"name": "Nova Scotia", "code": "NS"},
+    {"name": "New Brunswick", "code": "NB"},
+    {"name": "Manitoba", "code": "MB"},
+    {"name": "British Columbia", "code": "BC"},
+    {"name": "Prince Edward Island", "code": "PE"},
+    {"name": "Saskatchewan", "code": "SK"},
+    {"name": "Alberta", "code": "AB"},
+    {"name": "Newfoundland and Labrador", "code": "NL"}
+];
+//*/
   
 var countries = [
   {"code": "AD", "name": "Andorra", "calling_code": "+376 "},
